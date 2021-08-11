@@ -8,9 +8,12 @@ public class PrimeiraApp {
 		System.out.println("Primeira!!! :D");
 		
 		Professor cidão = new Professor("Aparecido Vilela Júnior", 2010);
-		Professor novo = new Professor("null", 0);
+		Professor novo = new Professor("null", 0, true);
 		
 		System.out.println("Foi..");
+		
+		//System.out.println("Nome completo do 'cidão' é: " + cidão.métodoQueRetornaONomeDoProfessor());
+		System.out.println("Nome completo do 'cidão' é: " + cidão.getNome());
 	}
 	
 }
