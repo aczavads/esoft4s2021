@@ -13,7 +13,10 @@ public class PrimeiraApp {
 		System.out.println("Foi..");
 		
 		//System.out.println("Nome completo do 'cidão' é: " + cidão.métodoQueRetornaONomeDoProfessor());
+		//cidão.setNome(null);
+		cidão.setAnoDeIngressoNaInstituição(-2020);
 		System.out.println("Nome completo do 'cidão' é: " + cidão.getNome());
+		
 	}
 	
 }
