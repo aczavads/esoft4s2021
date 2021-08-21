@@ -17,18 +17,26 @@ public class Carro {
 	}
 	
 	public void ligar() {
-		if (volumeNoTanqueEmLitros == 0) {
+		if (nãoTemCombustível()) {
 			throw new RuntimeException("Sem combustível!");
 		}
 		volumeNoTanqueEmLitros -= 1;
-		if (ligado) {
+		if (estáLigado()) {
 			throw new RuntimeException("Não pode ligar carro já ligado!!!");
 		}
 		ligado = true;
 	}
+
+	private boolean estáLigado() {
+		return ligado;
+	}
+
+	private boolean nãoTemCombustível() {
+		return volumeNoTanqueEmLitros == 0;
+	}
 	
 	public void desligar() {
-		if (!ligado) {
+		if (!estáLigado()) {
 			throw new RuntimeException("Não pode desligar carro já desligado!!!");
 		}
 		ligado = false;

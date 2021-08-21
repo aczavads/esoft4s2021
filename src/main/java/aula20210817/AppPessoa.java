@@ -11,18 +11,30 @@ public class AppPessoa {
 		familiaLima[3] = new Pessoa("Filho Lima", 168, 55.00, 19);
 		
 		Pessoa[] familiaAlmeida = new Pessoa[2];
-		familiaAlmeida[0] = new Pessoa("Amor Almeida 1", 155, 65.00, 26);
+		familiaAlmeida[0] = new Pessoa("Amor Almeida 1", 195, 65.00, 26);
 		familiaAlmeida[1] = new Pessoa("Amor Almeida 2", 170, 75.00, 24);
 
 		//System.out.println(familiaLima[2].getIMC());			
 		for (Pessoa pessoaDaVez : familiaLima) {
 			System.out.println(pessoaDaVez.getNome() + ", imc = " + pessoaDaVez.getIMC());
 		}	
+		
+		System.out.println("Pessoas com sobrepeso na família lima = " 
+				+ contarPessoasComSobrepesoNaFamilia(familiaLima));
+
+		System.out.println("Pessoas com sobrepeso na família almeida = " 
+				+ contarPessoasComSobrepesoNaFamilia(familiaAlmeida));
+
 	}
 	
 	public static int contarPessoasComSobrepesoNaFamilia(Pessoa[] família) {
 		//sobrepeso = imc > 24.9
-		return 0;
+		int contagem = 0;		
+		for (Pessoa membro : família) {
+			if (membro.getIMC() > 24.9) {
+				contagem++;
+			}
+		}		
+		return contagem;
 	}
-
 }
