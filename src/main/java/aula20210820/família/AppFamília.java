@@ -22,10 +22,15 @@ public class AppFamília {
 		}	
 		
 		System.out.println("Pessoas com sobrepeso na família lima = " 
-				+ famíliaLima.contarPessoasComSobrepeso());
+				+ famíliaLima.contarPessoasComSobrepeso()
+				+ ", que equivale a " 
+				+ famíliaLima.calcularPercentualPessoasComSobrepeso() + "%.");
+				
 
 		System.out.println("Pessoas com sobrepeso na família almeida = " 
-				+ familiaAlmeida.contarPessoasComSobrepeso());
+				+ familiaAlmeida.contarPessoasComSobrepeso() 
+				+ ", que equivale a " 
+				+ familiaAlmeida.calcularPercentualPessoasComSobrepeso() + "%.");
 
 	}
 

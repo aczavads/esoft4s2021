@@ -1,5 +1,7 @@
 package aula20210820.família;
 
+import java.util.Arrays;
+
 public class Família {
 	private Pessoa[] pessoas;
 	private int posiçãoPróximaPessoa = 0;
@@ -9,7 +11,8 @@ public class Família {
 	}
 	
 	public Pessoa[] getPessoas() {
-		return this.pessoas;
+		return Arrays.copyOf(this.pessoas, this.pessoas.length);
+		//return this.pessoas;
 	}
 
 	public void adicionar(Pessoa pessoa) {
@@ -45,8 +48,7 @@ public class Família {
 
 	public double calcularPercentualPessoasComSobrepeso() {
 		double percentual = 0.0;
-		percentual = contarPessoasComSobrepeso() / posiçãoPróximaPessoa * 100; 
-		//seu cálculo vem aqui...
+		percentual = (contarPessoasComSobrepeso() / (double)posiçãoPróximaPessoa) * 100.00; 
 		return percentual;
 	}
 }
