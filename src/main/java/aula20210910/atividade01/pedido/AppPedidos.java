@@ -11,6 +11,7 @@ public class AppPedidos {
 		Pedido pedido01 = new Pedido(1);
 		pedido01.adicionarItem(new ItemPedido(1, 6.75, omo));
 		pedido01.adicionarItem(new ItemPedido(2, 15.00, mel));
+		pedido01.adicionarItem(new ItemPedido(1, 15.00, mel));
 		
 		System.out.println(pedido01.getValorTotal()); //será impresso no console 36.75
 	}

@@ -24,4 +24,8 @@ public class ItemPedido {
 		return this.produto;
 	}
 	
+	//+ getValorTotal() : double
+	public double getValorTotal() {
+		return quantidade * valorUnitário;
+	}
 }
