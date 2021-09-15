@@ -15,6 +15,20 @@ public class Pedido {
 		return this.número;
 	}
 	
+	public void removerItemComProduto(Produto p) {
+		int posiçãoDoItemParaRemover = -1;
+		for (int i = 0; i < itens.size(); i++) {
+			ItemPedido ip = itens.get(i);
+			if (ip.getProduto() == p) {
+				posiçãoDoItemParaRemover = i;
+				break;
+			}
+		}
+		if (posiçãoDoItemParaRemover != -1) {
+			itens.remove(posiçãoDoItemParaRemover);
+		}
+	}
+	
 	public void adicionarItem(ItemPedido novo) {
 		
 		boolean jáTemProdutoNoPedido = false;
