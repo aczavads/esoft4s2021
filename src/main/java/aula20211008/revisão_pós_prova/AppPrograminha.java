@@ -41,6 +41,25 @@ public class AppPrograminha {
 		System.out.println("A(s) disciplina(s) com a menor carga horária é(são): " + recuperarDisciplinasComMenorCargaHorária(disciplinas));
 		System.out.println("Tchau!");
 	}
+
+	public static String recuperarDisciplinasComMenorCargaHorária(List<Disciplina> disciplinas) {
+		String nomeDasDisciplinas = "";
+		double menorCargaHorária = disciplinas.get(0).getCargaHorária();
+
+		for (Disciplina disciplina : disciplinas) {
+			if (disciplina.getCargaHorária() < menorCargaHorária) {
+				menorCargaHorária = disciplina.getCargaHorária();
+			}
+		}
+		for (Disciplina disciplina : disciplinas) {
+			if (disciplina.getCargaHorária() == menorCargaHorária) {
+				nomeDasDisciplinas += disciplina.getNome() + ", ";
+			}
+		}
+		
+		return nomeDasDisciplinas;
+	}
+
 	
 	public static double calcularCargaHoráriaMédia(List<Disciplina> disciplinas) {
 		double cargaHoráriaTotal = 0.00;
@@ -49,6 +68,7 @@ public class AppPrograminha {
 		}
 		return cargaHoráriaTotal / disciplinas.size();
 	}
+	
 	public static String recuperarCargasHoráriasDistintas(List<Disciplina> disciplinas) {
 		String cargasHoráriasDistintas = "";
 		
@@ -62,6 +82,7 @@ public class AppPrograminha {
 		}
 		return cargasHoráriasDistintas;
 	}
+	
 }
 
 

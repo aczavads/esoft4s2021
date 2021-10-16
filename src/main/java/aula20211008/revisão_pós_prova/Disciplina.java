@@ -21,4 +21,8 @@ public class Disciplina {
 	public double getCargaHorária() {
 		return cargaHorária;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
 }
