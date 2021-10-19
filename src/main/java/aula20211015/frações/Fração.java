@@ -21,5 +21,17 @@ public class Fração {
 		Fração inversa = new Fração(denominador, numerador);
 		return inversa;
 	}
-	
+	public Fração multiplicarPor(Fração outra) {
+		Fração resultante = new Fração(
+				this.numerador * outra.numerador,
+				this.denominador * outra.denominador);
+		return resultante;
+	}
+	public Fração dividirPor(Fração outra) {
+		Fração resultante = this.multiplicarPor(outra.inverter());
+		
+		return resultante;
+	}
 }
+
+

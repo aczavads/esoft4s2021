@@ -18,7 +18,7 @@ public class AppFrações {
 		//   3/2
 		System.out.println(trêsMeios.toString());
 		
-		System.out.println(umQuarto.mutiplicarPor(doisTerços));
+		System.out.println(umQuarto.multiplicarPor(doisTerços));
 		System.out.println(umQuarto.dividirPor(doisTerços));
 		
 	}
