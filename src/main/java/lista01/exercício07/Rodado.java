@@ -15,5 +15,9 @@ public class Rodado {
 	public int getPressão() {
 		return this.pressão;
 	}
+	
+	public Pneu getPneu() {
+		return pneu;
+	}
 
 }

@@ -14,5 +14,47 @@ public class Pneu {
 		this.altura = altura;
 		this.aro = aro;
 	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public void setLargura(int largura) {
+		this.largura = largura;
+	}
+
+	public void setAltura(int altura) {
+		this.altura = altura;
+	}
+
+	public void setAro(int aro) {
+		this.aro = aro;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public int getLargura() {
+		return largura;
+	}
+
+	public int getAltura() {
+		return altura;
+	}
+
+	public int getAro() {
+		return aro;
+	}
+	
+	
 	
 }
