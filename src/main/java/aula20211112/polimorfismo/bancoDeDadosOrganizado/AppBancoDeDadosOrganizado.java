@@ -7,8 +7,8 @@ public class AppBancoDeDadosOrganizado {
 	
 	public static void main(String[] args) {
 		try {
-			//Connection conn = DriverManager.getConnection("jdbc:h2:~/esoft4s2021","sa","");
-			Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/esoft4s2021","professor","professor");
+			Connection conn = DriverManager.getConnection("jdbc:h2:~/esoft4s2021","sa","");
+			//Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/esoft4s2021","professor","professor");
 			
 			ProdutoRepository repo = new ProdutoRepository(conn);
 			
@@ -21,6 +21,12 @@ public class AppBancoDeDadosOrganizado {
 			
 			
 			System.out.println(repo.encontrarPeloId(123));
+			
+			
+			System.out.println(">>> Todos os registros:");
+			for (Produto p: repo.encontrarTodos()) {
+				System.out.println("  " + p.toString());
+			}
 			
 			conn.close();
 			
